@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font/Yekan.woff">
+    <title>Quera</title>
+    <style>
+        .line-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .line-text::before,
+        .line-text::after {
+            content: "";
+            flex: 1;
+            border-bottom: 2px solid #AFAFAF;
+        }
+        .line-text:not(:empty)::before {
+            margin-right: 2em;
+        }
+        .line-text:not(:empty)::after {
+            margin-left: 2em;
+        }
+        .list-show {
+            display: none;
+            position: absolute;
+            top: 75px;
+            left: 50px;
+        }
+        .show{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            border-radius: 8px;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+<body class="bg-[#ffffff] overflow-x-hidden">
+    <header class="md:flex md:justify-between md:mt-7 mt-4">
+        <nav>
+            <ul class="md:flex md:gap-20 md:mr-28">
+                <li class="md:text-[#141414] md:font-bold md:cursor-pointer text-center font-[600] text-[16px] text-[#141414]">کوئرا لیست</li>
+                <li class="md:text-[#666666] md:cursor-pointer hidden md:block"><a href="./index.html">صفحه اصلی</a></li>
+                <li class="md:text-[#2C7EF8] md:cursor-pointer hidden md:block"><a href="./aboutUs.html">درباره ما</a></li>
+                <li class="md:text-[#666666] md:cursor-pointer hidden md:block"><a href="./callUs.html">ارتباط با ما</a></li>
+            </ul>
+        </nav>
+        <div class="md:flex md:gap-4 md:ml-24 hidden click-dark">
+            <button class="md:w-[200px] md:h-[40px] md:border-[1px] md:text-[#FFFFFF] md:border-[#075CD9] md:rounded-lg md:bg-[#075CD9] md:cursor-pointer">ورود به اپلیکیشن</button>
+            <button class="click-dark" id="click-dark">
+                <img src="./images/Group_2794.png" alt="" class="md:border-[1px] md:rounded-md md:gap-[8px] md:w-[40px] md:h-[40px] md:p-2 md:cursor-pointer">
+            </button>
+        </div>
+        <div id="new-btns" class="list-show w-[240px] h-[184px] bg-[#FFFFFF]">
+            <button class="flex gap-[20px] border-b-2 w-[200px] pb-2">
+                <img src="./images/light-outline.png" alt="">
+                <span>حالت روشن</span>
+            </button>
+            <button class="flex gap-[20px] border-b-2 w-[200px] pb-2">
+                <img src="./images/dark-outline.png" alt="">
+                <span class="">حالت تاریک</span>
+            </button>
+            <button class="flex gap-[20px]">
+                <img src="./images/light-dark.png" alt="">
+                <span>پیروی از دستگاه</span>
+            </button>
+        </div>
+        <img src="./images/menu.png" alt="" class="absolute top-4 right-2 md:hidden">
+    </header>
+    <section class="flex flex-col md:flex-row md:justify-between">
+        <div class="md:mr-[200px] mt-[100px]">
+            <img src="./images/Frame 427321285.png" alt="" class="md:hidden px-[10px]">
+            <h1 class="font-[700] text-[24px] text-center pt-2 md:text-[40px] text-[#070D31] pb-[10px] md:pb-[25px]">درباره‌ من</h1>
+            <h2 class="md:text-[32px] text-center text-[28px] font-[800] md:font-[400] text-[#575757] pb-[25px]">محمد محمدی</h2>
+            <p class="text-[18px] font-[400] text-[#444749] hidden md:block">
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای<br> معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل<br> علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر<br> وب آن استفاده نمایند.<br>
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای<br> معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل<br> علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر<br> وب آن استفاده نمایند.<br>
+                کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای<br> معتبر اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل<br> علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه مبتنی بر<br> وب آن استفاده نمایند.<br>
+            </p>
+            <div class="text-center">
+                <p class="md:hidden   font-[400] text-[12px] text-[#444749] leading-[30px]">
+                    کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از<br> استورهای معتبر اندروید دانلود نمایند. همچنین کاربران<br> سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور<br> می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند. کاربران<br> اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر<br> اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل<br> علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه<br> مبتنی بر وب آن استفاده نمایند.
+                </p>
+                <p class="md:hidden   font-[400] text-[12px] text-[#444749] leading-[30px]">
+                    کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از<br> استورهای معتبر اندروید دانلود نمایند. همچنین کاربران<br> سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور<br> می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند. کاربران<br> اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر<br> اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل<br> علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه<br> مبتنی بر وب آن استفاده نمایند.
+                </p>
+                <p class="md:hidden   font-[400] text-[12px] text-[#444749] leading-[30px]">
+                    کاربران اندروید می‌توانند اپلیکیشن کوئرالیست را از<br> استورهای معتبر اندروید دانلود نمایند. همچنین کاربران<br> سیستم عامل اپل علاوه بر دانلود نرم‌افزار از اپل‌استور<br> می‌توانند از نسخه مبتنی بر وب آن استفاده نمایند. کاربران<br> اندروید می‌توانند اپلیکیشن کوئرالیست را از استورهای معتبر<br> اندروید دانلود نمایند. همچنین کاربران سیستم عامل اپل<br> علاوه بر دانلود نرم‌افزار از اپل‌استور می‌توانند از نسخه<br> مبتنی بر وب آن استفاده نمایند.
+                </p>
+            </div>
+        </div>
+        <div class="flex md:flex-col justify-center md:justify-normal">
+            <img src="./images/Frame 427321285.png" alt="" class="ml-[200px] mt-[100px] hidden md:block">
+            <div class="grid grid-cols-2 grid-rows-2 gap-[24px] p-[32px] pt-[50px]">
+                <div class="border-[1px] border-[#F5F5F5] md:w-[230px] md:h-[112px] rounded-[16px] p-4">
+                    <h1 class="font-[700] text-[18px] md:text-[36px]">1379</h1>
+                    <h2 class="font-[400] text-[12px] md:text-[#575757]">سال تولد</h2>
+                </div>
+                <div class="border-[1px] border-[#F5F5F5] md:w-[230px] md:h-[112px] rounded-[16px] p-4">
+                    <h1 class="font-[700] text-[18px] md:text-[36px]">تهران</h1>
+                    <h2 class="font-[400] text-[12px] md:text-[#575757]">محل زندگی</h2>
+                </div>
+                <div class="border-[1px] border-[#F5F5F5] md:w-[230px] md:h-[112px] rounded-[16px] p-4">
+                    <h1 class="font-[700] text-[18px] md:text-[36px]">3.5</h1>
+                    <h2 class="font-[400] text-[12px] md:text-[#575757]">سال تجربه کار</h2>
+                </div>
+                <div class="border-[1px] border-[#F5F5F5] md:w-[230px] md:h-[112px] rounded-[16px] p-4">
+                    <h1 class="font-[700] text-[18px] md:text-[36px]">10+</h1>
+                    <h2 class="font-[400] text-[12px] md:text-[#575757]">مشارکت در پروژه‌ </h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="pt-[50px]">
+        <h1 class="line-text md:w-[500px] md:text-[20px] md:text-[#141414] md:font-[600] md:mx-auto">کوئرا لیست</h1>
+        <div class="flex justify-center md:justify-around md:pt-[50px]">
+            <div class="hidden md:block">
+                <ul class="md:list-outside md:flex md:flex-col md:gap-[25px]">
+                    <li class="list-image-[url(./images/Vector.png)] list-outside">فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</li>
+                    <li class="list-image-[url(./images/call.png)] list-outside">تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</li>
+                    <li class="list-image-[url(./images/location.png)] list-outside">آدرس دفتر مرکزی: پونک - خیابان اشرفی<br> اصفهانی - خیابان صبحدل- بن بست شب بو</li>
+                </ul>
+            </div>
+            <div class="relative ">
+                <h1 class="text-[#242424] md:text-[16px] font-[700] md:pb-[20px] text-[14px] pb-2">با ما در ارتباط باش</h1>
+                <p class="text-[#242424] md:text-[16px] font-[400] text-[12px] md:pb-[30px] hidden md:block ">اگه میخوای اولین نفری باشی که از فیچرهای جدید <br>و تخفیفات با خبر بشی.</p>
+                <p class="font-[400] text-[12px] md:hidden pb-4">اگه میخوای اولین نفری باشی که از فیچرهای جدید  و تخفیفات<br> با خبر بشی.</p>
+                <input type="email" placeholder="ایمیل" class="border-[2px] rounded-[8px] md:px-[70px] md:py-[10px] px-[50px] py-[8px] absolute">
+                <button class="px-[20px] py-[5px] border-[1px] text-[#FFFFFF] border-[#075CD9] rounded-md bg-[#075CD9] cursor-pointer absolute mix-blend-multiply left-[10px] bottom-[-40px] md:bottom-0 md:left-0">ارسال</button>
+            </div>
+        </div>
+        <div class="md:hidden grid grid-cols-2 pt-[75px]">
+            <div class="flex flex-col justify-center shadow-[0px_0px_11.12px_0px_rgba(0, 0, 0, 0.06)]">
+                <img src="./images/location2.png" alt="" class="w-[40px] mix-blend-multiply mx-auto">
+                <p class="font-[400] text-[10px] text-[#242424] text-center">آدرس دفتر مرکزی: پونک - <br> خیابان اشرفی اصفهانی -<br> خیابان صبحدل- بن بست شب<br> بو</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="flex gap-1">
+                    <img src="./images/call2.png" alt="" class="w-[40px]">
+                    <p class="font-[400] text-[10px] text-[#242424]">تلفن پشتیبانی<br> ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+                </div>
+                <div class="flex gap-1">
+                    <img src="./images/faks.png" alt="" class="w-[40px]">
+                    <p class="font-[400] text-[10px] text-[#242424]">فکس<br> ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+                </div>
+            </div>
+        </div>
+        <p class="md:text-[14px] text-[12px] font-[400] text-[#666666] text-center pt-[50px] md:pt-[75px]">تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.</p>
+    </footer>
+    <script src="./js/DOM.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "YekanBach";
+    src: url("./font/Yekan\ Bakh\ Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }

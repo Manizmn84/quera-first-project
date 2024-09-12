@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="./font/Yekan.woff">
+    <title>Quera</title>
+    <style>
+        .line-text {
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .line-text::before,
+        .line-text::after {
+            content: "";
+            flex: 1;
+            border-bottom: 2px solid #AFAFAF;
+        }
+        .line-text:not(:empty)::before {
+            margin-right: 2em;
+        }
+        .line-text:not(:empty)::after {
+            margin-left: 2em;
+        }
+        .list-show {
+            display: none;
+            position: absolute;
+            top: 75px;
+            left: 50px;
+        }
+        .show{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            border-radius: 8px;
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+<body class="bg-[#ffffff] overflow-x-hidden">
+    <header class="md:flex md:justify-between md:mt-7 mt-4">
+        <nav>
+            <ul class="md:flex md:gap-20 md:mr-28">
+                <li class="md:text-[#141414] md:font-bold md:cursor-pointer text-center font-[600] text-[16px] text-[#141414]">کوئرا لیست</li>
+                <li class="md:text-[#666666] md:cursor-pointer hidden md:block"><a href="./index.html">صفحه اصلی</a></li>
+                <li class="md:text-[#666666] md:cursor-pointer hidden md:block"><a href="./aboutUs.html">درباره ما</a></li>
+                <li class="md:text-[#2C7EF8] md:cursor-pointer hidden md:block"><a href="./callUs.html">ارتباط با ما</a></li>
+            </ul>
+        </nav>
+        <div class="md:flex md:gap-4 md:ml-24 hidden click-dark">
+            <button class="md:w-[200px] md:h-[40px] md:border-[1px] md:text-[#FFFFFF] md:border-[#075CD9] md:rounded-lg md:bg-[#075CD9] md:cursor-pointer">ورود به اپلیکیشن</button>
+            <button class="click-dark" id="click-dark">
+                <img src="./images/Group_2794.png" alt="" class="md:border-[1px] md:rounded-md md:gap-[8px] md:w-[40px] md:h-[40px] md:p-2 md:cursor-pointer">
+            </button>
+        </div>
+        <div id="new-btns" class="list-show w-[240px] h-[184px] bg-[#FFFFFF]">
+            <button class="flex gap-[20px] border-b-2 w-[200px] pb-2">
+                <img src="./images/light-outline.png" alt="">
+                <span>حالت روشن</span>
+            </button>
+            <button class="flex gap-[20px] border-b-2 w-[200px] pb-2">
+                <img src="./images/dark-outline.png" alt="">
+                <span class="">حالت تاریک</span>
+            </button>
+            <button class="flex gap-[20px]">
+                <img src="./images/light-dark.png" alt="">
+                <span>پیروی از دستگاه</span>
+            </button>
+        </div>
+        <img src="./images/menu.png" alt="" class="absolute top-4 right-2 md:hidden">
+    </header>
+    <section class="flex flex-col text-center mt-[50px] md:flex-row md:mt-[150px] md:gap-[200px]">
+        <main class="md:flex md:flex-col md:border-l-[2px] md:border-[#E0E0E0] md:pl-[100px] ">
+            <div class="md:mr-[200px] md:flex md:flex-col md:gap-[30px]">
+                <h1 class="md:font-[700] md:text-[40px] md:text-[#070D31] hidden md:block">تماس با‌ من</h1>
+                <h1 class="md:hidden text-[24px] text-[#141414]  font-[700]">تماس با ما</h1>
+                <p class="font-[400] md:text-[20px] md:text-[#6F7076] text-[14px] text-[#141414] pt-2">چیزی هست که بخوای ازم بپرسی؟ خوشحال میشم بتونم<br> بهت کمکی کنم.</p>
+                <ul class="md:flex md:flex-col md:gap-[25px] hidden">
+                    <li class="md:list-image-[url(./images/call.png)] md:text-[18px] md:font-[600] md:text-[#070D31]"><a href="tel:+98966304410" target="_blank">09966304410</a></li>
+                    <li class="md:list-image-[url(./images/sms.png)] md:text-[18px] md:font-[500] md:text-[#070D31]"><a href="mailto:mani.84.zmn@gmail.com" target="_blank">mani.84.zmn@gmail.com</a></li>
+                </ul>
+                <div class="md:flex md:gap-[30px] md:pt-[250px] hidden">
+                    <button><img src="./images/Icon.png" alt=""></button>
+                    <button><img src="./images/twitter.png" alt=""></button>
+                    <button><img src="./images/linkedin.png" alt=""></button>
+                </div>
+            </div>
+        </main>
+        <section class="md:relative md:left-[100px] overflow-x-hidden mt-[25px] mx-auto">
+            <form class="">
+                <div class="flex md:gap-[25px] gap-[15px] ">
+                    <div class="inline-flex flex-col md:gap-[10px] gap-[5px] items-start">
+                        <label for="name" class="md:text-[16px] text-[12px] font-[600] text-[#070D31]">نام:</label>
+                        <input type="text" placeholder="نام شما" id="name" class="text-[12px] md:text-[16px] border-[1px] rounded-[6px] w-[140px] h-[40px] p-4 md:w-[223px] md:h-[56px] border-[#E6E6E6] md:p-[16px]">
+                    </div>
+                    <div class="inline-flex flex-col md:gap-[10px] gap-[5px] items-start">
+                        <label for="family-name" class="md:text-[16px] text-[12px] font-[600] text-[#070D31]">نام خانوادگی:</label>
+                        <input type="text" placeholder="نام خانوادگی شما" id="family-name" class="text-[12px] md:text-[16px] border-[1px] rounded-[6px] w-[140px] h-[40px] p-4 md:w-[223px] md:h-[56px] border-[#E6E6E6] md:p-[16px]">
+                    </div>
+                </div>
+                <div class="flex flex-col gap-[10px] pt-[25px] justify-center items-start">
+                    <label for="email" class="md:text-[16px] text-[12px] font-[600] text-[#070D31] ">ایمیل:</label>
+                    <input type="email" id="email" placeholder="ایمیل" class="text-[12px] md:text-[16px] border-[1px] rounded-[6px] border-[#E6E6E6] md:w-[471px] md:h-[56px] p-4 w-[296px] h-[46px] ">
+                </div>
+                <div class="flex flex-col gap-[10px] pt-[25px] justify-start items-start mx-auto">
+                    <label for="phone" class="md:text-[16px] text-[12px] font-[600] text-[#070D31]">شماره تماس:</label>
+                    <input type="phone" id="phone" placeholder="شماره تماس شما" class="text-[12px] md:text-[16px] border-[1px] rounded-[6px] border-[#E6E6E6] md:w-[471px] md:h-[56px] p-4 w-[296px] h-[46px] ">
+                </div>
+                <div class=" flex flex-col gap-[10px] pt-[25px] items-start">
+                    <label for="text" class="md:text-[16px] text-[12px] font-[600] text-[#070D31]">متن:</label>
+                    <textarea id="text" placeholder="متن پیام شما" class="text-[12px] md:text-[16px] border-[1px] rounded-[6px] border-[#E6E6E6]  w-[300px] h-[130px] p-[16px] md:w-[471px] md:h-[136px]"></textarea>
+                </div>
+                <div class="pt-[25px] ">
+                    <input type="submit" id="submit" value="ارسال پیام" class="border-[1px] rounded-[6px] border-[#2C7EF8]  w-[296px] h-[40px] md:w-[471px] md:h-[56px] cursor-pointer bg-[#2C7EF8] text-[#FFFFFF]">
+                </div>
+            </form>
+            <div class="md:hidden flex mt-7 gap-3">
+                <div class="flex w-[156px] h-[56px] py-[12px] px-[8px] gap-4 shadow-[0px_4px_63px_0px_rgba(0,0,0,.1)] rounded-xl">
+                    <div>
+                        <img src="./images/email.png" alt="">
+                    </div>
+                    <div class="flex flex-col items-start ">
+                        <div class="font-[700] text-[10px] ">ایمیل</div>
+                        <div class="font-[400] text-[10px]"><a href="mailto:QueraList@gmail.com" target="_blank">QueraList@gmail.com</a></div>
+                    </div>
+                </div>
+                <div class="flex w-[156px] h-[56px] py-[12px] px-[8px] gap-4 shadow-[0px_4px_63px_0px_rgba(0,0,0,.1)] rounded-xl">
+                    <div>
+                        <img src="./images/call3.png" alt="">
+                    </div>
+                    <div class="flex flex-col items-start ">
+                        <div class="font-[700] text-[10px] ">تماس</div>
+                        <div class="font-[400] text-[10px]"><a href="telto:+9896604410" target="_blank">09966304410</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="md:hidden flex justify-center gap-3 pt-[25px]">
+                    <button><img src="./images/Icon.png" alt="" class="w-4 h-4"></button>
+                    <button><img src="./images/twitter.png" alt="" class="w-4 h-4"></button>
+                    <button><img src="./images/linkedin.png" alt="" class="w-4 h-4"></button>
+            </div>
+        </section>
+    </section>
+    <footer class="pt-[50px]">
+        <h1 class="line-text md:w-[500px] md:text-[20px] md:text-[#141414] md:font-[600] md:mx-auto">کوئرا لیست</h1>
+        <div class="flex justify-center md:justify-around md:pt-[50px]">
+            <div class="hidden md:block">
+                <ul class="md:list-outside md:flex md:flex-col md:gap-[25px]">
+                    <li class="list-image-[url(./images/Vector.png)] list-outside">فکس: ۴۴۴۴۵۵۶۶ - ۰۲۱</li>
+                    <li class="list-image-[url(./images/call.png)] list-outside">تلفن پشتیبانی: ۴۴۴۴۵۵۶۶ - ۰۲۱</li>
+                    <li class="list-image-[url(./images/location.png)] list-outside">آدرس دفتر مرکزی: پونک - خیابان اشرفی<br> اصفهانی - خیابان صبحدل- بن بست شب بو</li>
+                </ul>
+            </div>
+            <div class="relative ">
+                <h1 class="text-[#242424] md:text-[16px] font-[700] md:pb-[20px] text-[14px] pb-2">با ما در ارتباط باش</h1>
+                <p class="text-[#242424] md:text-[16px] font-[400] text-[12px] md:pb-[30px] hidden md:block ">اگه میخوای اولین نفری باشی که از فیچرهای جدید <br>و تخفیفات با خبر بشی.</p>
+                <p class="font-[400] text-[12px] md:hidden pb-4">اگه میخوای اولین نفری باشی که از فیچرهای جدید  و تخفیفات<br> با خبر بشی.</p>
+                <input type="email" placeholder="ایمیل" class="border-[2px] rounded-[8px] md:px-[70px] md:py-[10px] px-[50px] py-[8px] absolute">
+                <button class="px-[20px] py-[5px] border-[1px] text-[#FFFFFF] border-[#075CD9] rounded-md bg-[#075CD9] cursor-pointer absolute mix-blend-multiply left-[10px] bottom-[-40px] md:bottom-0 md:left-0">ارسال</button>
+            </div>
+        </div>
+        <div class="md:hidden grid grid-cols-2 pt-[75px]">
+            <div class="flex flex-col justify-center shadow-[0px_0px_11.12px_0px_rgba(0, 0, 0, 0.06)]">
+                <img src="./images/location2.png" alt="" class="w-[40px] mix-blend-multiply mx-auto">
+                <p class="font-[400] text-[10px] text-[#242424] text-center">آدرس دفتر مرکزی: پونک - <br> خیابان اشرفی اصفهانی -<br> خیابان صبحدل- بن بست شب<br> بو</p>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="flex gap-1">
+                    <img src="./images/call2.png" alt="" class="w-[40px]">
+                    <p class="font-[400] text-[10px] text-[#242424]">تلفن پشتیبانی<br> ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+                </div>
+                <div class="flex gap-1">
+                    <img src="./images/faks.png" alt="" class="w-[40px]">
+                    <p class="font-[400] text-[10px] text-[#242424]">فکس<br> ۴۴۴۴۵۵۶۶ - ۰۲۱</p>
+                </div>
+            </div>
+        </div>
+        <p class="md:text-[14px] text-[12px] font-[400] text-[#666666] text-center pt-[50px] md:pt-[75px]">تمامی حقوق مادی و معنوی این سایت متعلق به کوئرا لیست می‌باشد.</p>
+    </footer>
+    <script src="./js/DOM.js"></script>
+</body>
